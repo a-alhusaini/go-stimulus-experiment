@@ -1,0 +1,36 @@
+{{define "main"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "stimulus": "https://cdn.jsdelivr.net/npm/stimulus@3.2.2/+esm"
+        }
+      }
+    </script>
+    <script type="module" src="/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Hello World!</h1>
+      <div class="grid">
+        <div data-controller="hello">
+          <label for="firstname">
+            First name
+            <input id="firstname" type="text" />
+          </label>
+          <button data-action="click->hello#greet">submit</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+{{end}}
